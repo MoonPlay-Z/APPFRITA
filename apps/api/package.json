@@ -1,0 +1,40 @@
+{
+  "name": "@appfrita/api",
+  "private": true,
+  "scripts": {
+    "start:dev": "tsx src/main.ts",
+    "build": "tsc -p tsconfig.json --noEmit false",
+    "test": "jest",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "db:pull": "prisma db pull",
+    "db:generate": "prisma generate",
+    "start": "tsx src/main.ts"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@nestjs/common": "^12.1.2",
+    "@nestjs/config": "^12.0.1",
+    "@nestjs/core": "^12.1.2",
+    "@nestjs/jwt": "^12.0.2",
+    "@nestjs/platform-express": "^12.1.2",
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "bcryptjs": "^3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "pg": "^8.23.1",
+    "prisma": "^7.10.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
