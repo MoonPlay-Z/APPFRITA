@@ -27,7 +27,7 @@ export class LocationsService {
 
   async nearby(lng: number, lat: number, radiusM: number) {
     return this.prisma.$queryRawUnsafe(
-      `SELECT l.id, l.name, b.name AS business_name, b.rating_avg,
+      `SELECT l.id, l.name, l.business_id, b.name AS business_name, b.rating_avg,
               ST_Distance(l.geo, ST_MakePoint($1,$2)::geography) AS dist_m
        FROM locations l JOIN businesses b ON b.id = l.business_id
        WHERE l.is_active AND l.is_open_now AND b.is_active

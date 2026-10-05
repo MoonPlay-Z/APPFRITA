@@ -30,6 +30,12 @@ export class AuthService {
     return { access_token: this.jwt.sign({ sub: user.id, role: user.role }) };
   }
 
+  async me(userId: string) {
+    const u = await this.prisma.users.findUnique({ where: { id: userId } });
+    if (!u) throw new UnauthorizedException('usuario no encontrado');
+    return { id: u.id, email: u.email, phone: u.phone, full_name: u.full_name, role: u.role, rating_avg: null };
+  }
+
   private async hash(pw: string) {
     const bcrypt = await import('bcryptjs');
     return bcrypt.hash(pw, 10);
