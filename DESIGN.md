@@ -44,3 +44,9 @@ Research: Refero MCP aún no configurado → dirección derivada del craft bundl
 - Logo y nombre final (hoy "AppFrita" provisional).
 - Fuente definitiva y escala tipográfica.
 - Paleta definitiva tras investigación Refero MCP (estilos).
+
+## Sistema de diseño vigente (Stitch — AppFrita Street Flavor)
+
+Fuente de verdad: `diseño grafico/stitch_local_street_food_delivery_platform/appfrita_street_flavor/DESIGN.md`.
+Colores clave: primario flame `#AD2C00`, amarillo cheddar `#FFB703` (ratings/promos), verde guacamole `#2A9D8F` (abierto/éxito), canvas crema `#FCF9F8`, tinta `#1C1B1B`.
+Tipografía: Epilogue (headlines, pesos 700-800) + Plus Jakarta Sans (body/labels). Esquinas tipo pill, cards de 32px. Implementado en Flutter en `apps/mobile/lib/theme.dart` (`AppTheme.light`).
